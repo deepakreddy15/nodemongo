@@ -1,0 +1,44 @@
+<div>
+  <ul>
+    <li *ngFor="let movie of movies">
+      <div class="border container col-lg-6" >
+        <span class="text-justify fo" >
+          Movie Name:{{ movie.Name }}</span>
+        <h6>Director:{{movie.Director}}</h6>
+        <h6>Starring:{{movie.Starring}}</h6>
+        <h6>Generes:{{movie.Generes}}</h6>
+        <h6>Country:{{movie.Country}}</h6>
+        <h6>Language:{{movie.Laungauage}}</h6>
+      </div>
+        <div class="col-lg-6">
+          <span style="background-color: aqua">Likes:{{movie.Like}}</span>
+          <span style="background-color: brown">DisLikes:{{movie.DisLike}}</span>
+        </div>
+      <div>
+        <a class="btn btn-primary" [routerLink]="['/user-review', movie.Name]">Review></a>
+
+        <ng-container class="" *ngFor="let comments of movie.Comment">
+          <span class="focus" style="background-color: gray">{{comments}}<br></span>
+        </ng-container>
+
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+
+
+<form class="container margin">
+UserName <input type="text" class="form-group" [(ngModel)]="UserDetails.UserName" [ngModelOptions]="{standalone: true}"/>
+  <br>
+  MovieName <input type="text" class="form-group"  [(ngModel)]="UserDetails.MovieName" [ngModelOptions]="{standalone: true}"/><br>
+
+  Comment:<textarea class="text-justify" [(ngModel)]="UserDetails.Comment" [ngModelOptions]="{standalone: true}"></textarea>
+  <span class="color btn glyphicon glyphicon-thumbs-up" (click)="countIncrement()" >Like</span>
+  <span class="color-unlike btn glyphicon glyphicon-thumbs-down" (click)="countDecrement()">UnLike</span>
+  <button class="btn btn-danger" (click)="getReview()">Submit</button>
+
+
+</form>
+

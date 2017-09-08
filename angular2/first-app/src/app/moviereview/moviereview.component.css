@@ -1,0 +1,12 @@
+.color{
+  background-color: aqua;
+}
+.color:hover{
+  background-color: blue;
+}
+.color-unlike{
+  background-color: red;
+}
+.color-unlike:hover{
+  background-color: saddlebrown;
+}

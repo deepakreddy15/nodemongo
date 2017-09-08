@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+ <p style="text-justify: kashida">Please Help others by giving your review</p>
+</div>
+<div class="container">
+<a  class="btn btn-primary col-md-offset-10" routerLink="cinema" routerLinkActive="Active" (click)="insertMovies()">Admin</a>
+</div>
+<div class="container" [hidden]=display >
+  <div class="col-md-4 border" (click)="reviewPageMovie()">
+    <h3>Movies</h3>
+    <a>Telugu</a>
+    <br>
+    <a>Hindi</a>
+    <br>
+    <a>Tamil</a>
+  </div>
+  <div class="col-md-4 border" (click)="reviewPageRestaurents()">
+    <h3>Restaurents & Food</h3>
+    <a>South Indian</a><br>
+    <a>North Indian</a><br>
+    <a>Middle Eastern</a>
+  </div>
+  <div class="col-md-4 border" (click)="reviewPageLocations()">
+    <h3>Locations</h3>
+    <a>Europe</a><br>
+    <a>North Tour</a><br>
+    <a>Singpore</a>
+  </div>
+</div>
+<!--<button routerLink="cinema" routerLinkActive="Active">Movies</button>-->
+<!--<button routerLink="/ticket" routerLinkActive="Active">Ticket</button>-->
+<router-outlet></router-outlet>

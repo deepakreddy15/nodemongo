@@ -1,0 +1,13 @@
+<p>
+  tickdetails works! {{movie}}
+</p>
+<ul>
+  <li *ngFor="let detail of details">
+    <span>{{detail.api}}</span>
+  </li>
+</ul>
+
+<button (click)="previous()">Previous</button>   <button (click)="next()">Next</button>
+<br>
+<br>
+<button routerLink="/ticket" routerLinkActive="Active">Back</button>

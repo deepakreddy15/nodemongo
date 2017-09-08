@@ -1,0 +1,18 @@
+
+<div class="container">
+  <ul class="col-xs-3 border" *ngFor="let image of images">
+    <li>{{image.image_url}}</li>
+    <span class="btn btn-block" (click)="reviewPage()">{{image.name}}</span>
+  </ul>
+</div>
+
+
+<div>
+  <ul *ngFor="let movie of movies" class="col-xs-3 table-bordered">
+    <li>{{movie.title}}</li>
+    <li>{{movie.year}}</li>
+    <li>{{movie.imdb}}</li>
+    <li>This movie has been {{movie.like}} by {{movie.title}}</li>
+
+      </ul>
+</div>

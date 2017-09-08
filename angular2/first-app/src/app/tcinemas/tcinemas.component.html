@@ -1,0 +1,50 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="MovieName">Movie Name:</label>
+    <div class="col-sm-6">
+      <input type="email" class="form-control" id="MovieName" [(ngModel)]="CInema.Name" [ngModelOptions]="{standalone: true}" placeholder="Enter Cinema Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Director">Director:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Director" [(ngModel)]="CInema.Director" [ngModelOptions]="{standalone: true}" placeholder="Director Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Starring">Starring By:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Starring" [(ngModel)]="CInema.Starring" [ngModelOptions]="{standalone: true}" placeholder="Enter Stars Name ">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Generes">Generes:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Generes" [(ngModel)]="CInema.Generes" [ngModelOptions]="{standalone: true}" placeholder="Generes">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Country">Country:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Country" [(ngModel)]="CInema.Country" [ngModelOptions]="{standalone: true}" placeholder="Enter Country Name ">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Launguage">Launguage:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Launguage" [(ngModel)]="CInema.Launguage" [ngModelOptions]="{standalone: true}" placeholder="Launguage">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Trailer">Trailer:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Trailer" [(ngModel)]="CInema.Trailer" [ngModelOptions]="{standalone: true}" placeholder="Trailer URL">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" (click)="crewdetails()">Submit</button>
+    </div>
+  </div>
+
+</form>
